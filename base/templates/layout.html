@@ -1,0 +1,107 @@
+{% load staticfiles %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+    <title>ADOPT</title>
+    <link rel="stylesheet" href="{% static 'base/style.css' %}">
+    {% block extra_style %}{% endblock %}
+</head>
+<body>
+    <div class="container-fluid" id="main_container">
+        
+        <div class="container-fluid">
+            
+            <div class="row">
+                <div class="col" id="banner">
+                    <h1 id="base_color"  >
+                        <a href="{% url 'home' %}">
+                            <span  >
+                                ADOPT A FRIEND
+                            </span>
+                        </a>
+                    </h1>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col" id="info_banner">
+                    <ul class="nav justify-content-center">
+                        <li class="nav-item">
+                            <a id="special" href="{% url 'adopt:adopt_all' %}">
+                                <h5>Adopt</h5>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            {% if user.is_authenticated %}
+                            <a href="{% url 'messageboard:forum_list' %}">
+                                <h5>MessageBoard </h5>
+                            </a>
+                            {% else %}
+                            <a class="nav-link disabled" href="">
+                                <h5>MessageBoard </h5>
+                            </a>
+                            {% endif %}
+                        </li>
+                        <img src="{% static 'base/sprite.jpg' %}" alt="sprite of dog" id="sprite_left">
+                        <button class="btn">
+                            <li class="nav-item" id="short_button">
+                                {% if user.is_authenticated %}
+                                    <a href="/accounts/logout/">
+                                        <h5>Logout Until Next Time</h5>
+                                    </a>
+                                {% else %}
+                                    <a href="/accounts/signup/">
+                                        <h5>Sign Up/In to Communicate With Other Pet Lovers!</h5>
+                                    </a>
+                                {% endif %}
+                            </li>
+                        </button>
+                        <img src="{% static 'base/sprite.jpg' %}" alt="sprite of dog" id="sprite_right">
+                        <li class="nav-item">
+                            <a href="{% url 'locations:home' %}">
+                                <h5>Locations</h5>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{% url 'locations:parks' %}">
+                                <h5>Dog Parks </h5>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div  id="body_container">
+                {% block body %}{% endblock %}
+            </div>
+            <div class="row" id="footer">
+                <div class="col">
+
+                    <ul class="nav justify-content-center">
+                        <img src="{% static 'base/meowth.png' %}" alt="picture of meowth" id="meowth">
+                        <li class="nav-item">
+                            <a href="{% url 'contact_us' %}">
+                                <h5>Contact Us</h5>
+                            </a>
+                        </li>
+                        <img src="{% static 'base/meowth.png' %}" alt="picture of meowth" id="meowth">
+                        <li class="nav-item">
+                            <a href="{% url 'volunteer:jobs_listing' %}">
+                                <h5>Volunteer</h5>
+                            </a>
+                        </li>
+                        <img src="{% static 'base/meowth.png' %}" alt="picture of meowth" id="meowth">
+                    </ul>
+                </div>
+            </div>
+            {% block extra_js %}{% endblock %}
+        </div>
+    </div>
+</body>
+</html>
