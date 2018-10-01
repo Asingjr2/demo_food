@@ -2,9 +2,8 @@
 
 import os
 
-# Change to environment variable later
-# KEY = os.environ['GOOGLE_API_KEY']
-KEY = "AIzaSyBENAoPGfk_NPZToQDtQee1TJy8rWzvTdM"
+KEY = os.environ['GOOGLE_API_KEY']
+
 
 """Listing of upcoming event locations."""
 
