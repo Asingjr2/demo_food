@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% load staticfiles %}
+
+{% load crispy_forms_tags %}
+
+{% block body %}
+<div>
+  <h1 id="italics">Talk To Us</h1>
+  <div class="row">
+    <div class="col-sm-3">
+      {% include "demo/side_tabs.html" %}    
+    </div>
+
+    <div class="col-sm-8">
+      <form method="post" id="feedback-form">
+        {% csrf_token %}
+        {{ form | crispy  }}
+        <button class="btn btn-success">Submit Feedback</button>
+      </form>
+    </div>
+  </div>
+
+</div>
+{% endblock %}
+
+{% block extra_js %}
+    <script type="text/javascript" src="{% static 'demo/feedback_form.js' %}"></script>
+{% endblock %}
+

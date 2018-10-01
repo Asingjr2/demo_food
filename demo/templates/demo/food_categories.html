@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% load staticfiles %}
+
+{% block extra_style %}
+<link rel="stylesheet" href="{% static 'demo/css/food_categories.css' %}">
+{% endblock %}
+
+{% block body %}
+
+<div class="row">
+  <div class="col-sm-3">
+      {% include "demo/side_tabs.html" %}   
+  </div>
+
+  <div class="col-sm-8">
+    <div class="row">
+      <div class="col-sm-3" id="food-cat">
+        Chicken
+      </div>
+      <div class="col-sm-1"></div>
+      <div class="col-sm-3" id="food-cat">Shrimp</div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-3" id="food-cat">
+        Chicken
+      </div>
+      <div class="col-sm-1"></div>
+      <div class="col-sm-3" id="food-cat">Shrimp</div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

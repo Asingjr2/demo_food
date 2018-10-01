@@ -1,0 +1,26 @@
+<div class="tabs-with-search">
+  <ul class="list-group">
+    <li class="list-group-item">
+      <form action="{% url 'all_ingredients' %}" method="get" class="form">
+        {% csrf_token %}
+        <input type="text" name="q" placeholder="Search Ingredients" value="{{ request.GET.q }}"><br>
+        <button class="btn btn-large btn-outline-info" id="block">SEARCH</button>
+        <button class="btn btn-large btn-outline-info" id="block">
+          <a href="{% url 'all_ingredients' %}">SHOW ALL</a>
+        </button>
+      </form>
+    </li>
+    <li class="list-group-item">
+    <a href="{% url 'food_categories' %}">See Our Menu</a>
+    </li>
+    <li class="list-group-item">
+    <a href="#">Next Event</a>
+    </li>
+    <li class="list-group-item">
+    <a href="{% url 'all_ingredients' %}">All Ingredients</a>
+    </li>
+    <li class="list-group-item">
+    <a href="{% url 'feedback' %}">Talk to Us</a>
+    </li>
+  </ul>
+</div>

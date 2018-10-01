@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+
+{% load staticfiles %}
+
+{% block body %}
+  
+  <h2>HEY SAMUS</h2>
+
+  <div class="container">
+    <div id="floating-panel">
+      <input type="text" name="start" id="start" placeholder="start point">
+      <select name="end" id="end">
+          {% for place in locations %}
+          <option value="{{ place }} ">{{ place }}</option>
+          {% endfor %}
+      </select>
+    </div>
+    <div id="right-panel"></div>
+    <div id="map"></div>
+    <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqau3bClOAWzm_pS8qhlVBtDAbFHrzSCQ&callback=initMap"></script> -->
+  </div>     
+
+{% endblock %}
+
+{% block extra_js %}
+
+  <script src="{% static 'demo/js/events.js' %}"></script>
+
+{% endblock %}

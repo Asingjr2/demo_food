@@ -7,13 +7,17 @@
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+    color: white;
 }
 #sb-color{
     height: 20px;
     background-image: radial-gradient(white, rgb(214, 45, 15));
 }
-#grey {
-    background-color: rgb(238, 227, 227)
+#bk-image {
+    background-image: url("images/sb_2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.8;
 }
 
 
@@ -40,3 +44,5 @@
     background-color:  rgb(198, 240, 126)
 }
 
+
+#top-bottom-img
