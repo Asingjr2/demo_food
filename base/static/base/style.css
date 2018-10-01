@@ -1,83 +1,42 @@
-#main_container{
-    background-image: linear-gradient(white, rgb(250, 216, 62));
-    height:auto;
-    min-height:1400px;
-}
-#body-container{
-}
-#info_container{
-    background-color:white;
-    min-height:920px;
-    border-bottom: rgb(250, 216, 62);
-}
-#banner{
-    color: rgb(250, 216, 62);
-    height:60px;
-    padding-bottom:15px;
-    margin-bottom: 40px;
-    background-color: white;
-    text-align: center;
-    border-bottom: 5px ridge rgb(250, 216, 62);
-}
-h1,h5 {
-    font-family: cursive
-}
-#info_banner{
+
+.header {
     height:70px;
-    padding: 10 0 10 0;
-    margin-bottom: 40px;
-    background-color: white;
-    border-bottom: 5px ridge rgb(250, 216, 62);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 3em;
+    font-style: italic;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
-#info_banner p {
-    display: inline-block
+#sb-color{
+    height: 20px;
+    background-image: radial-gradient(white, rgb(214, 45, 15));
+}
+#grey {
+    background-color: rgb(238, 227, 227)
 }
 
-#footer{
-    margin-top:20px;
+
+.footer{
     color: blue;
     text-align: center;
-    padding: 10 0 10 0;
-    border-bottom: 5px ridge rgb(250, 216, 62); 
-    background-color:white;
-}
-#foot_col{
-    margin-left:5px;
-    text-align: center;
 }
 
-.nav li{
-    margin-left:20px;
+.footer li:hover {
+    color:green;
+    font-weight: bold;
 }
-#center{
-    align-items: center;
-    align-content: center;
+
+.wide {
+    width : 90%;
+    margin-bottom: 20px;
 }
-#forum_box{
-    max-height: 200px;
-    background-color:white;
-    padding: 10px;
-    overflow: auto;
+
+.side-tabs li:hover {
+    background-color: rgb(198, 240, 126)
 }
-#sprite{
-    height: 30px;
-    width: 30px;
+
+.tabs-with-search li:hover {
+    background-color:  rgb(198, 240, 126)
 }
-#sprite_left{
-    height: 40px;
-    width: 30px;
-    margin-left:20px;
-    margin-right:5px;
-}
-#sprite_right{
-    height: 40px;
-    width: 30px;
-    margin-left: 5px;
-    margin-right: 20px;
-}
-#meowth{
-    height: 50px;
-    width: 40px;
-    margin-left: 20px;
-    margin-right: 20px;
-}
+
